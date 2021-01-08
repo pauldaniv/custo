@@ -19,4 +19,3 @@ EOF
 setupGpgSshAuth
 
 source ~/.zshrc
-echo Done!
