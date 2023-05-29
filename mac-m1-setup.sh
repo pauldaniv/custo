@@ -1,31 +1,39 @@
 #!/usr/bin/env sh
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/pavlodaniv/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if ! command -v brew &>/dev/null; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  (
+    echo
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"'
+  ) >>/Users/pavlodaniv/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 #brew required
 brew install \
-jq \
-kubectl \
-act \
-pyenv
+  jq \
+  kubectl \
+  act \
+  pyenv
 
-curl -s "https://get.sdkman.io" | bash
+if ! command -v sdk &>/dev/null; then
+  curl -s "https://get.sdkman.io" | bash
+fi
+
 sdk install gradle
 
 #todo: sdkman, gradle, pyenv, .ssh/config setup
 source ~/.zshrc
 
 echo "Populating .gitconfig-personal"
-tee -a .gitconfig-personal > /dev/null <<EOF
+tee -a .gitconfig-personal >/dev/null <<EOF
 [user]
         signingkey = B286731F71468F7BCF4E80F300B9131832CF5F5A
         name = Pavlo
         email = paulsegfault@gmail.com
 EOF
 
-tee -a .gitconfig-work > /dev/null <<EOF
+tee -a .gitconfig-work >/dev/null <<EOF
 [user]
         signingkey = 2FB3A344CECD9DC353BCB55A245C609B300925CF
         name = Pavlo Daniv
@@ -33,7 +41,7 @@ tee -a .gitconfig-work > /dev/null <<EOF
 EOF
 
 echo "Populating .gitconfig"
-tee -a .gitconfig > /dev/null <<EOF
+tee -a .gitconfig >/dev/null <<EOF
 [core]
         repositoryformatversion = 0
         filemode = true
