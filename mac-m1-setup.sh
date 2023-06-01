@@ -5,7 +5,7 @@ if ! command -v brew &>/dev/null; then
   (
     echo
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"'
-  ) >>/Users/pavlodaniv/.zprofile
+  ) >>.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
