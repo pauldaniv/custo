@@ -14,7 +14,8 @@ brew install \
   jq \
   kubectl \
   act \
-  pyenv
+  pyenv \
+  gh
 
 if ! command -v sdk &>/dev/null; then
   curl -s "https://get.sdkman.io" | bash
