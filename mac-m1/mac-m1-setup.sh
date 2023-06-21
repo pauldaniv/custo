@@ -60,3 +60,6 @@ tee -a .gitconfig >/dev/null <<EOF
         remote = origin
         merge = refs/heads/master
 EOF
+
+mkdir $HOME/.config/custom
+touch $HOME/.config/custom/auto_venv.txt
