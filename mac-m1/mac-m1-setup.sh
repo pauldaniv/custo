@@ -17,6 +17,9 @@ brew install \
   pyenv \
   gh
 
+pyenv install 3.9.8
+
+
 if ! command -v sdk &>/dev/null; then
   curl -s "https://get.sdkman.io" | bash
 fi
