@@ -4,7 +4,7 @@ if [[ -d ~/.custo ]]; then
   cd ~/.custo
   git pull
 else
-  git -C ~ clone git@github.com:pauldaniv/custo.git .custo
+  git -C ~ clone https://github.com/pauldaniv/custo.git .custo
   cd ~/.custo
 fi
 
