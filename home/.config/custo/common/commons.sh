@@ -7,7 +7,7 @@ NC='\033[0m'
 
 custo() {
   if [[ $1 == "update" ]]; then
-    ~/.custo/install.sh
+    ~/.custo/fresh-setup/install.sh
   else
     echo "Unsupported command"
   fi
