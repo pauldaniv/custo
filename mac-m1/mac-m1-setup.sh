@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
 
+GITHUB_USER="pauldaniv"
+PERSONAL_EMAIL=
+WORK_EMAIL=
+
 if ! command -v brew &>/dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   (
@@ -34,14 +38,14 @@ tee -a .gitconfig-personal >/dev/null <<EOF
 [user]
         signingkey = B286731F71468F7BCF4E80F300B9131832CF5F5A
         name = Pavlo
-        email = paulsegfault@gmail.com
+        email = $PERSONAL_EMAIL
 EOF
 
 tee -a .gitconfig-work >/dev/null <<EOF
 [user]
         signingkey = 2FB3A344CECD9DC353BCB55A245C609B300925CF
         name = Pavlo Daniv
-        email = pavlo.daniv@sombrainc.com
+        email = $WORK_EMAIL
 EOF
 
 echo "Populating .gitconfig"
@@ -54,7 +58,7 @@ tee -a .gitconfig >/dev/null <<EOF
         ignorecase = true
         precomposeunicode = true
 [remote "origin"]
-        url = git@github.com:pauldaniv/fresh-setup
+        url = git@github.com:$GITHUB_USER/fresh-setup
         fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "master"]
         remote = origin

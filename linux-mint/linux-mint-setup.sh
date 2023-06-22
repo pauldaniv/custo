@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-function setupGpgSshAuth() {
+setupGpgSshAuth() {
   # just going to leave hardcoded key id for now
   gpg --export-ssh-key 69B9DCD16B3B72328E65D4FF9B89AB834D9D68ED >.ssh/id_rsa.pub
 

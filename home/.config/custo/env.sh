@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-
+source
 for i in "${extensions[@]}"; do
-  source $HOME/.config/custom/extensions/${i}.sh
+  source $HOME/.config/custo/extensions/${i}.sh
 done
