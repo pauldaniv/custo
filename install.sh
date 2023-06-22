@@ -8,10 +8,10 @@ else
   cd ~/.custo
 fi
 
-if ! grep -q ".custo/env" "$HOME/.zshrc"; then
+if ! grep -q ".custo/bin/env" "$HOME/.zshrc"; then
   tee -a $HOME/.zshrc <<EOF
 #CUSTO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-source ~/.custo/env.sh
+source ~/.custo/bin/env.sh
 #END CUSTO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 EOF
 fi

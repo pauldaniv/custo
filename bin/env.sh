@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-source $HOME/.config/custo/common/commons.sh
+source $HOME/.custo/bin/common/commons.sh
 
 for i in "${extensions[@]}"; do
-  source $HOME/.config/custo/extensions/${i}.sh
+  source $HOME/.custo/bin/extensions/${i}.sh
 done
