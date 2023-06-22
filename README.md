@@ -1,6 +1,11 @@
 ## Custom configs for fresh setup and customizations
-
-- Install the tool
+### Installation
 ```shell
-# command to curl install file from github and run
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/pauldaniv/fresh-setup/master/install.sh)"
 ```
+
+### Limitations
+- Currently only works with zsh
+
+### Future features
+- support for fish
