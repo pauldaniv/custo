@@ -22,5 +22,3 @@ source ~/.config/custo/env.sh
 #END CUSTO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 EOF
 fi
-
-source ~/.zshrc
