@@ -1,7 +1,7 @@
 ## Custom configs for fresh setup and customizations
 ### Installation
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/pauldaniv/fresh-setup/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/pauldaniv/custo/master/install.sh)"
 ```
 
 ### Limitations
