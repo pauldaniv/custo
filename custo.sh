@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 
-function upgrade() {
-  cp home/* $HOME
+function custo() {
+  cp -r home/ $HOME
 }
 
 if [[ $1 == "upgrade" ]]; then
-  upgrade
+  custo
 fi
