@@ -8,3 +8,7 @@ nvenv() {
   local name=${1:-venv}
   python -m venv $name
 }
+
+whoah_dude() {
+  echo "DUdeee!"
+}
