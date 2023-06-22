@@ -12,3 +12,7 @@ nvenv() {
 whoah_dude() {
   echo "DUdeee!"
 }
+
+anothen_one() {
+  echo "another..."
+}
