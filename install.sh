@@ -4,8 +4,14 @@ REPO_NAME="fresh-setup"
 
 mkdir -p ~/.custo
 cd ~/.custo
-git clone git@github.com:pauldaniv/$REPO_NAME.git
-cd $REPO_NAME
+if [[ -d $REPO_NAME ]]; then
+  cd $REPO_NAME
+  git pull
+else
+  git clone git@github.com:pauldaniv/$REPO_NAME.git
+  cd $REPO_NAME
+fi
+
 
 cp -r home/ $HOME
 
@@ -16,10 +22,9 @@ extensions=(
         python
         alias
 )
-source $HOME/.config/custo/env.sh
+source ~/.config/custo/env.sh
 #END CUSTO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 EOF
 fi
 
-sed -i '/*.config/custo/env.sh*/$HOME/.config/custo/env.sh/' ~/.zshrc
+sed 's%*.config/custo/env.sh*%$HOME/.config/custo/env11111.sh%' ~/.zshrc
