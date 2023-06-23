@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env fish
 
 source $HOME/.custo/bin/common/commons.fish
 
