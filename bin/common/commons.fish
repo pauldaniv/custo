@@ -78,10 +78,11 @@ set -x On_IWhite '\033[0;107m'   # White
 
 
 function custo
-  if test $1 = "update"
+  set command $argv[1]
+  if test $command = "update"
     ~/.custo/install.sh
     source ~/.config/fish/config.fish
-  else if test $1 = "version"
+  else if test $command = "version"
     echo "$(git --no-pager branch) $Green->$NC $(git rev-parse --short HEAD) $Blue->$NC $(git --no-pager show -s --format=%s)"
   else
     echo "Unsupported command"
