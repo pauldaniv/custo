@@ -23,6 +23,7 @@ populate_fish() {
   tee -a $SHELL_SOURCE_FILE <<EOF
 set extensions python
 set --append extensions alias
+source ~/$CUSTO_HOME/bin/env.fish
 EOF
 }
 
@@ -32,6 +33,7 @@ extensions=(
         python
         alias
 )
+source ~/$CUSTO_HOME/bin/env.sh
 EOF
 }
 
@@ -45,7 +47,6 @@ EOF
   $populate_func
 
   tee -a $SHELL_SOURCE_FILE <<EOF
-source ~/$CUSTO_HOME/bin/env.sh
 #END CUSTO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 EOF
 fi
