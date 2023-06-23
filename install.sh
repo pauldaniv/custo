@@ -15,7 +15,7 @@ if [[ -d ~/$CUSTO_HOME ]]; then
   cd ~/.custo
   git pull
 else
-  git -C ~ clone https://github.com/pauldaniv/custo.git $CUSTO_HOME
+  git -C ~ clone -b master https://github.com/pauldaniv/custo.git $CUSTO_HOME
   cd ~/.custo
 fi
 
