@@ -15,4 +15,4 @@ function pyctivate
   else
     echo "no" >$auto_venv_config
   end
-}
+end
