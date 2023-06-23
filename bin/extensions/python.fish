@@ -6,9 +6,9 @@ if test -e "./venv/bin/activate" && test -e $auto_venv_config && $(cat $auto_ven
 end
 
 pyctivate() {
-  if [ "$(cat $auto_venv_config)" = "yes" ]
+  if test (cat $auto_venv_config) = "yes"
     echo "no" >$auto_venv_config
-  else if  [ "$(cat $auto_venv_config)" = "no" ]
+  else if test (cat $auto_venv_config) = "no"
     echo "yes" >$auto_venv_config
   else
     echo "no" >$auto_venv_config
