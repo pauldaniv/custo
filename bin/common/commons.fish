@@ -81,7 +81,7 @@ function custo
   if [ $1 = "update" ]
     ~/.custo/install.sh
   else if [ $1 = "version" ]
-    echo "$(git --no-pager branch) ${Green}->${NC} $(git rev-parse --short HEAD) ${Blue}->${NC} $(git --no-pager show -s --format=%s)"
+    echo "$(git --no-pager branch) $Green->$NC $(git rev-parse --short HEAD) $Blue->$NC $(git --no-pager show -s --format=%s)"
   else
     echo "Unsupported command"
   end
