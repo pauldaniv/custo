@@ -80,9 +80,11 @@ On_IWhite='\033[0;107m'   # White
 custo() {
   if [[ $1 == "update" ]]; then
     ~/.custo/install.sh
+    source ~/.zshrc
   elif [[ $1 == "version" ]]; then
     echo "$(git -C ~/.custo --no-pager branch) ${Green}->${NC} $(git -C rev-parse --short HEAD) ${Blue}->${NC} $(git -C ~/.custo --no-pager show -s --format=%s)"
   else
     echo "Unsupported command"
   fi
 }
+n
