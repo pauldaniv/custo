@@ -83,7 +83,7 @@ function custo
     ~/.custo/install.sh
     source ~/.config/fish/config.fish
   else if test $command = "version"
-    echo "$(git --no-pager branch) $Green->$NC $(git rev-parse --short HEAD) $Blue->$NC $(git --no-pager show -s --format=%s)"
+    echo -e "$(git --no-pager branch) $Green->$NC $(git rev-parse --short HEAD) $Blue->$NC $(git --no-pager show -s --format=%s)"
   else
     echo "Unsupported command"
   end
