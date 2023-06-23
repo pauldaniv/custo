@@ -20,14 +20,14 @@ else
 fi
 
 populate_fish() {
-  tee -a $HOME/.zshrc <<EOF
+  tee -a $HOME/$SHELL_SOURCE_FILE <<EOF
 set extensions python
 set --append extensions alias
 EOF
 }
 
 populate_zsh() {
-  tee -a $HOME/.zshrc <<EOF
+  tee -a $HOME/$SHELL_SOURCE_FILE <<EOF
 extensions=(
         python
         alias
@@ -36,7 +36,7 @@ EOF
 }
 
 if ! grep -q "$CUSTO_HOME/bin/env" "$HOME/$SHELL_SOURCE_FILE"; then
-  tee -a $HOME/.zshrc <<EOF
+  tee -a $HOME/$SHELL_SOURCE_FILE <<EOF
 #CUSTO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # Add extensions bellow
 EOF
