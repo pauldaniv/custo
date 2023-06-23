@@ -10,9 +10,13 @@ end
 function pyctivate
   if test (cat $auto_venv_config) = "yes"
     echo "no" >$auto_venv_config
+    echo -e "$Red*disabled*$NC"
   else if test (cat $auto_venv_config) = "no"
     echo "yes" >$auto_venv_config
+    echo -e "$Green*enabled*$NC"
   else
+    echo -e "$Red!unexpected state!"
+    echo -e "*disabled*$NC"
     echo "no" >$auto_venv_config
   end
 end
