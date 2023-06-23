@@ -1,18 +1,18 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 alias watch="watch "
 alias k="kubectl"
 alias grsh="git reset --soft HEAD^"
 
-nvenv() {
+function nvenv() {
   local name=${1:-venv}
   python -m venv $name
 }
 
-whoah_dude() {
+function whoah_dude() {
   echo "DUdeee!"
 }
 
-anothen_one() {
+function anothen_one() {
   echo "another..."
 }

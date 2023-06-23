@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+set auto_venv_config $HOME/.config/custom/auto_venv.txt
+
 if test -e "./venv/bin/activate" && test -e $auto_venv_config && $(cat $auto_venv_config) == "yes"
   source ./venv/bin/activate
   echo "Activated venv: ${CYAN}$(which python)${NC}"

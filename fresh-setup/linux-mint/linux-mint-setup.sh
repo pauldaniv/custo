@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 setupGpgSshAuth() {
   # just going to leave hardcoded key id for now

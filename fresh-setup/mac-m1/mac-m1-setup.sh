@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 GITHUB_USER="pauldaniv"
 PERSONAL_EMAIL=
