@@ -5,7 +5,11 @@ alias k="kubectl"
 alias grsh="git reset --soft HEAD^"
 
 function nvenv
-  local name=${1:-venv}
+  set name $argv[1]
+  if test -z name
+      set name "venv"
+  end
+  # Use the local_name variable within this function
   python -m venv $name
 end
 
