@@ -7,7 +7,7 @@ if test -e "./venv/bin/activate" && test -e $auto_venv_config && test (cat $auto
   echo "Activated venv: $CYAN$(which python)$NC"
 end
 
-pyctivate() {
+function pyctivate
   if test (cat $auto_venv_config) = "yes"
     echo "no" >$auto_venv_config
   else if test (cat $auto_venv_config) = "no"
