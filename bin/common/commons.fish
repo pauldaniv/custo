@@ -92,7 +92,7 @@ function custo
       case '*'
         set branch_color "$NC"
     end
-    echo -e "$branch_color$branch$NC$Green->$NC $(git -C ~/.custo rev-parse --short HEAD) $Blue->$NC $(git -C ~/.custo --no-pager show -s --format=%s)"
+    echo -e "$branch_color$branch$NC $Green->$NC $(git -C ~/.custo rev-parse --short HEAD) $Blue->$NC $(git -C ~/.custo --no-pager show -s --format=%s)"
   else
     echo "Unsupported command"
   end
