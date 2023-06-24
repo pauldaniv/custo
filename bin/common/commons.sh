@@ -87,4 +87,3 @@ custo() {
     echo "Unsupported command"
   fi
 }
-n
