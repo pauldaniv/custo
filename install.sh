@@ -12,8 +12,9 @@ elif [[ $SHELL == *"fish"* ]]; then
 fi
 
 branch=master
-if [[ $CUSTO_BETA_TESTING == true ]]; then
+if [[ $CUSTO_EARLY_ACCESS == true ]]; then
   branch=develop
+  echo "Using experimental mode"
 fi
 
 if [[ -d ~/$CUSTO_HOME ]]; then
