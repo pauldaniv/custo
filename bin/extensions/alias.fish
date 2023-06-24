@@ -10,6 +10,7 @@ alias ll='ls -lh'
 alias ls='ls -G'
 alias lsa='ls -lah'
 alias md='mkdir -p'
+alias -='cd -'
 
 function nvenv
   set name $argv[1]
