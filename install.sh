@@ -11,11 +11,16 @@ elif [[ $SHELL == *"fish"* ]]; then
   SHELL_SOURCE_FILE="$HOME/.config/fish/config.fish"
 fi
 
+branch=master
+if [[ $CUSTO_BETA_TESTING == true ]]; then
+  branch=develop
+fi
+
 if [[ -d ~/$CUSTO_HOME ]]; then
   cd ~/.custo
   git pull
 else
-  git -C ~ clone -b master https://github.com/pauldaniv/custo.git $CUSTO_HOME
+  git -C ~ clone -b $branch https://github.com/pauldaniv/custo.git $CUSTO_HOME
   cd ~/.custo
 fi
 
