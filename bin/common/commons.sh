@@ -82,7 +82,7 @@ custo() {
     ~/.custo/install.sh
     source ~/.zshrc
   elif [[ $1 == "version" ]]; then
-    echo "$(git -C ~/.custo --no-pager branch) ${Green}->${NC} $(git -C rev-parse --short HEAD) ${Blue}->${NC} $(git -C ~/.custo --no-pager show -s --format=%s)"
+    echo "$(git -C ~/.custo --no-pager branch --show-current) ${Green}->${NC} $(git -C rev-parse --short HEAD) ${Blue}->${NC} $(git -C ~/.custo --no-pager show -s --format=%s)"
   else
     echo "Unsupported command"
   fi
