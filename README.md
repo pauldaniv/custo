@@ -8,4 +8,5 @@
 - Currently only works with zsh
 
 ### Future features
-- support for fish
+- feature flags
+- support for fish ✅
