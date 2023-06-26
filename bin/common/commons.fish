@@ -78,14 +78,7 @@ set -x On_IWhite '\033[0;107m'   # White
 
 
 function custo
-  source ~/.custo/bin/common/functions.fish
   set command $argv[1]
-  switch "$command"
-    case "update"
-      update
-    end
-    case "version"
-      version
-    end
-  end
+  source ~/.custo/bin/common/functions.fish
+  $command
 end
