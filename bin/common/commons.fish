@@ -78,23 +78,15 @@ set -x On_IWhite '\033[0;107m'   # White
 
 
 function custo
+  source ~/.custo/bin/common/functions.fish
   set command $argv[1]
-  if test $command = "update"
-    ~/.custo/install.sh
-    source ~/.config/fish/config.fish
-  else if test $command = "version"
-    set branch (git -C ~/.custo --no-pager branch --show-current)
-    switch "$branch"
-      case 'develop' fish_vi_key_bindings
-        set branch_color "$Purple"
-      case 'master'
-        set branch_color "$Green"
-      case '*'
-        set branch_color "$NC"
+  switch "$command"
+    case "update"
+      update
     end
-    set message (git -C ~/.custo --no-pager show -s --format=%s)
-    set commit_hash (git -C ~/.custo rev-parse --short HEAD)
-    echo -e "$branch_color$branch $Green-> $Black$commit_hash $Blue-> $Green$message$NC"
+    case "version"
+      version
+    end
   else
     echo "Unsupported command"
   end
