@@ -87,7 +87,5 @@ function custo
     case "version"
       version
     end
-  else
-    echo "Unsupported command"
   end
 end
