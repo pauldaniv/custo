@@ -13,9 +13,7 @@ alias md='mkdir -p'
 
 function nvenv
   set name $argv[1]
-  if test -z name
-      set name "venv"
-  end
+  test -n "$XYZ"; or set XYZ "venv"
   # Use the local_name variable within this function
   python -m venv $name
 end
