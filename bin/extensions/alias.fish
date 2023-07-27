@@ -11,12 +11,7 @@ alias ls='ls -G'
 alias lsa='ls -lah'
 alias md='mkdir -p'
 
-function nvenv
-  set name $argv[1]
-  test -n "$name"; or set name "venv"
-  # Use the local_name variable within this function
-  python -m venv $name
-end
+
 
 function whoah_dude
   echo "DUdeee!"
