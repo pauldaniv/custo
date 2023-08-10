@@ -10,3 +10,4 @@
 ### Future features
 - feature flags
 - support for fish ✅
+- add auto pyctivate file creation
