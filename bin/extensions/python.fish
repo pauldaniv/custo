@@ -2,13 +2,13 @@
 
 set auto_venv_config $HOME/.config/custom/auto_venv.txt
 
-if test -e "./venv/bin/activate" && test -e $auto_venv_config && test (cat $auto_venv_config) = "yes"
-  activenv
-end
-
 function activenv
   source ./venv/bin/activate.fish
   echo -e "Activated venv: $CYAN$(which python)$NC"
+end
+
+if test -e "./venv/bin/activate" && test -e $auto_venv_config && test (cat $auto_venv_config) = "yes"
+  activenv
 end
 
 function auto_venv
