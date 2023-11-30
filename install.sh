@@ -31,6 +31,8 @@ populate_fish() {
 set extensions python
 set --append extensions alias
 source ~/$CUSTO_HOME/bin/env.fish
+touch ~/.custo_profile.fish
+source ~/.custo_profile.fish
 EOF
 }
 
