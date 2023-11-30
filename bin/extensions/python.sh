@@ -19,3 +19,10 @@ pyctivate() {
     echo "no" >$auto_venv_config
   fi
 }
+
+nvenv()
+  name=$1
+  test -n "$name"; or set name "venv"
+  # Use the local_name variable within this function
+  python -m venv $name
+end

@@ -78,9 +78,17 @@ On_IWhite='\033[0;107m'   # White
 
 
 custo() {
+  if [[ $SHELL == *"zsh"* ]]; then
+    SHELL_TYPE="zsh"
+    SHELL_SOURCE_FILE="$HOME/.zshrc"
+  elif [[ $SHELL == *"bash"* ]]; then
+    SHELL_TYPE="bash"
+    SHELL_SOURCE_FILE="$HOME/.bashrc"
+  fi
+
   if [[ $1 == "update" ]]; then
     ~/.custo/install.sh
-    source ~/.zshrc
+    . $SHELL_SOURCE_FILE
   elif [[ $1 == "version" ]]; then
     echo "$(git -C ~/.custo --no-pager branch --show-current) ${Green}->${NC} $(git -C rev-parse --short HEAD) ${Blue}->${NC} $(git -C ~/.custo --no-pager show -s --format=%s)"
   else

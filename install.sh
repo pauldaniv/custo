@@ -9,6 +9,9 @@ if [[ $SHELL == *"zsh"* ]]; then
 elif [[ $SHELL == *"fish"* ]]; then
   SHELL_TYPE="fish"
   SHELL_SOURCE_FILE="$HOME/.config/fish/config.fish"
+elif [[ $SHELL == *"bash"* ]]; then
+  SHELL_TYPE="bash"
+  SHELL_SOURCE_FILE="$HOME/.bashrc"
 fi
 
 branch=master
@@ -43,6 +46,16 @@ extensions=(
         alias
 )
 source ~/$CUSTO_HOME/bin/env.sh
+EOF
+}
+
+populate_bash() {
+  tee -a $SHELL_SOURCE_FILE <<EOF
+extensions=(
+        python
+        alias
+)
+. ~/$CUSTO_HOME/bin/env.sh
 EOF
 }
 
