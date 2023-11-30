@@ -29,6 +29,7 @@ if [[ -d ~/$CUSTO_HOME ]]; then
   git pull
 else
   git -C ~ clone -b $branch https://github.com/pauldaniv/custo.git $CUSTO_HOME
+  echo "Cloned"
   cd ~/.custo
 fi
 
