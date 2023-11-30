@@ -84,6 +84,10 @@ custo() {
   elif [[ $SHELL == *"bash"* ]]; then
     SHELL_TYPE="bash"
     SHELL_SOURCE_FILE="$HOME/.bashrc"
+  else
+    # bash by default
+    SHELL_TYPE="bash"
+    SHELL_SOURCE_FILE="$HOME/.bashrc"
   fi
 
   if [[ $1 == "update" ]]; then

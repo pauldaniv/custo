@@ -12,6 +12,9 @@ elif [[ $SHELL == *"fish"* ]]; then
 elif [[ $SHELL == *"bash"* ]]; then
   SHELL_TYPE="bash"
   SHELL_SOURCE_FILE="$HOME/.bashrc"
+else
+  SHELL_TYPE="bash"
+  SHELL_SOURCE_FILE="$HOME/.bashrc"
 fi
 
 branch=master
