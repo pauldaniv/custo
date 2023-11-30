@@ -20,9 +20,13 @@ pyctivate() {
   fi
 }
 
-nvenv()
+nvenv() {
   name=$1
-  test -n "$name"; or set name "venv"
   # Use the local_name variable within this function
-  python -m venv $name
-end
+  python -m venv ${name:-venv}
+}
+
+activenv() {
+  . ./venv/bin/activate.sh
+  echo -e "Activated venv: $CYAN$(which python)$NC"
+}
