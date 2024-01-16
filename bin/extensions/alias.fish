@@ -25,3 +25,8 @@ end
 function anothen_one
   echo "another..."
 end
+
+function gbdr
+  set branch_name $argv[1]
+  git branch -D $branch_name && git push origin --delete $branch_name
+end
