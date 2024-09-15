@@ -16,12 +16,11 @@ fi
 #brew required
 brew install \
   jq \
-  kubectl \
   act \
   pyenv \
   gh
 
-pyenv install 3.9.8
+pyenv install 3.11.5
 
 
 if ! command -v sdk &>/dev/null; then
@@ -31,7 +30,7 @@ fi
 sdk install gradle
 
 #todo: sdkman, gradle, pyenv, .ssh/config setup
-source ~/.zshrc
+source ~/.config/fish/config.fish
 
 echo "Populating .gitconfig-personal"
 tee -a .gitconfig-personal >/dev/null <<EOF
