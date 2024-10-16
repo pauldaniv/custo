@@ -33,19 +33,19 @@ function aws_config_set
 
         # Detect AWS Access Key ID
         if [[ "$line" =~ ^aws_access_key_id=.*$ ]]; then
-            aws_access_key_id=$(echo "$line" | cut -d '=' -f 2)
+            set -l aws_access_key_id (echo "$line" | cut -d '=' -f 2)
             continue
         fi
 
         # Detect AWS Secret Access Key
         if [[ "$line" =~ ^aws_secret_access_key=.*$ ]]; then
-            aws_secret_access_key=$(echo "$line" | cut -d '=' -f 2)
+            set -l aws_secret_access_key (echo "$line" | cut -d '=' -f 2)
             continue
         fi
 
         # Detect AWS Session Token
         if [[ "$line" =~ ^aws_session_token=.*$ ]]; then
-            aws_session_token=$(echo "$line" | cut -d '=' -f 2)
+            set -l aws_session_token (echo "$line" | cut -d '=' -f 2)
             continue
         fi
     done
