@@ -76,3 +76,17 @@ EOF
 #END CUSTO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 EOF
 fi
+
+# ---- bootstrap pipeline ----------------------------------------------------
+export CUSTO_HOME="$HOME/$CUSTO_HOME"
+
+case "$(uname -s)" in
+  Darwin) OS_SCRIPT="$CUSTO_HOME/setup/mac.sh" ;;
+  Linux)  OS_SCRIPT="$CUSTO_HOME/setup/linux.sh" ;;
+  *) echo "Unsupported OS: $(uname -s)"; exit 1 ;;
+esac
+
+bash "$OS_SCRIPT"
+bash "$CUSTO_HOME/setup/common.sh"
+bash "$CUSTO_HOME/setup/git.sh"
+bash "$CUSTO_HOME/setup/stow.sh"

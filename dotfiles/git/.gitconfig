@@ -1,0 +1,16 @@
+[init]
+    defaultBranch = main
+[pull]
+    rebase = true
+[push]
+    autoSetupRemote = true
+[rebase]
+    autoStash = true
+[commit]
+    gpgsign = true
+[core]
+    precomposeunicode = true
+[includeIf "gitdir:~/development/personal/"]
+    path = ~/.gitconfig-personal
+[includeIf "gitdir:~/work/"]
+    path = ~/.gitconfig-work

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="NetSuite" uuid="d1d01c6d-909b-4aab-9a0a-cde34b0fa988">
+      <driver-ref>java.sql.Driver</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>com.netsuite.jdbc.openaccess.OpenAccessDriver</jdbc-driver>
+      <jdbc-url>jdbc:ns://5214190.connect.api.netsuite.com:1708;ServerDataSource=NetSuite.com;Encrypted=1;NegotiateSSLClose=false;CustomProperties=(AccountID=5214190;RoleID=1021);</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="Zeppelin" read-only="true" uuid="e229a86f-e523-4b24-8b09-beb7e851963e">
+      <synchronize>true</synchronize>
+      <remarks>Wrapper For Zeppelin Spark from Big Data Tools plugin</remarks>
+      <jdbc-driver>com.dbschema.ZeppelinSparkJdbcDriver</jdbc-driver>
+      <jdbc-url>Zeppelin@ZeppelinConnections@7345348207792459356</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="forceUseDriverIcon" value="true" />
+        <property name="connectionId" value="Zeppelin@ZeppelinConnections@7345348207792459356" />
+      </jdbc-additional-properties>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="Zeppelin" read-only="true" uuid="26d5126c-e4dd-4e49-9cc6-f72328c5ed47">
+      <synchronize>true</synchronize>
+      <remarks>Wrapper For Zeppelin Spark from Big Data Tools plugin</remarks>
+      <jdbc-driver>com.dbschema.ZeppelinSparkJdbcDriver</jdbc-driver>
+      <jdbc-url>Zeppelin@ZeppelinConnections@5521546688908316801</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="forceUseDriverIcon" value="true" />
+        <property name="connectionId" value="Zeppelin@ZeppelinConnections@5521546688908316801" />
+      </jdbc-additional-properties>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

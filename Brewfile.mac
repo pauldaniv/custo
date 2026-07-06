@@ -1,0 +1,5 @@
+# Mac-only — casks, fonts, GUI apps
+tap "homebrew/cask-fonts"
+
+cask "ghostty"
+cask "font-jetbrains-mono-nerd-font"

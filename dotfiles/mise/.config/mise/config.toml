@@ -1,0 +1,7 @@
+[tools]
+python = "3.11"
+node = "lts"
+java = "21"
+
+[settings]
+experimental = true

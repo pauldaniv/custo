@@ -1,0 +1,13 @@
+# Shared formulae — installed on mac and linux (where applicable)
+brew "jq"
+brew "gh"
+brew "act"
+brew "stow"
+brew "mise"
+brew "starship"
+brew "fish"
+brew "fzf"
+brew "ripgrep"
+brew "bat"
+brew "eza"
+brew "zoxide"

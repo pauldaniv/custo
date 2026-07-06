@@ -1,0 +1,8 @@
+build-essential
+curl
+git
+unzip
+zip
+ca-certificates
+procps
+file
