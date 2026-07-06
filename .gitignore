@@ -1,2 +1,4 @@
+.idea
 .custo.env
 *.local
+.DS_Store
