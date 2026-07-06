@@ -55,6 +55,9 @@ extensions=(
         alias
 )
 source ~/$CUSTO_HOME/bin/env.sh
+if command -v pyenv &>/dev/null; then
+  eval "\$(pyenv init - zsh)"
+fi
 EOF
 }
 
@@ -65,6 +68,9 @@ extensions=(
         alias
 )
 . ~/$CUSTO_HOME/bin/env.sh
+if command -v pyenv &>/dev/null; then
+  eval "\$(pyenv init - bash)"
+fi
 EOF
 }
 

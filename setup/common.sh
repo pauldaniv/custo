@@ -11,7 +11,7 @@ if [[ ! -d "$HOME/.sdkman" ]]; then
   curl -s "https://get.sdkman.io" | bash
 fi
 
-# mise — language runtime manager (replaces pyenv/nvm/asdf)
+# mise — language runtime manager (node/java; Python versions also available via pyenv, installed through Brewfile/apt.list)
 if command -v mise &>/dev/null; then
   mise trust "$HOME/.config/mise/config.toml" || true
   mise install || true
