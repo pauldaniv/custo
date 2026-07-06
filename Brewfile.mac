@@ -1,5 +1,5 @@
 # Mac-only — casks, fonts, GUI apps
-tap "homebrew/cask-fonts"
+# Note: font casks live in the main homebrew/cask tap now; homebrew/cask-fonts was merged in and deprecated.
 
 cask "ghostty"
 cask "font-jetbrains-mono-nerd-font"

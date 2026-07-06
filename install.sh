@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 CUSTO_HOME=".custo"
 SHELL_TYPE=
 
-if [[ $SHELL == *"zsh"* ]]; then
+if [[ ${SHELL:-} == *"zsh"* ]]; then
   SHELL_TYPE="zsh"
   SHELL_SOURCE_FILE="$HOME/.zshrc"
-elif [[ $SHELL == *"fish"* ]]; then
+elif [[ ${SHELL:-} == *"fish"* ]]; then
   SHELL_TYPE="fish"
   SHELL_SOURCE_FILE="$HOME/.config/fish/config.fish"
-elif [[ $SHELL == *"bash"* ]]; then
+elif [[ ${SHELL:-} == *"bash"* ]]; then
   SHELL_TYPE="bash"
   SHELL_SOURCE_FILE="$HOME/.bashrc"
 else
@@ -18,15 +19,19 @@ else
 fi
 
 branch=master
-if [[ $CUSTO_EARLY_ACCESS == true ]]; then
+if [[ ${CUSTO_EARLY_ACCESS:-} == true ]]; then
   branch=develop
-  echo -e "${Purple}Using experimental mode${NC}"
+  echo -e "${Purple:-}Using experimental mode${NC:-}"
 fi
 
 if [[ -d ~/$CUSTO_HOME ]]; then
   cd ~/.custo
-  git checkout $branch
-  git pull
+  if [[ -n "$(git status --porcelain)" ]]; then
+    echo "~/$CUSTO_HOME has local changes — skipping checkout/pull so nothing is overwritten."
+  else
+    git checkout $branch
+    git pull --ff-only
+  fi
 else
   git -C ~ clone -b $branch https://github.com/pauldaniv/custo.git $CUSTO_HOME
   echo "Cloned"
